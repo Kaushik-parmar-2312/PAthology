@@ -34,6 +34,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
   gtag('config', 'AW-16458395568');
 </script>
+<!-- Event snippet for Lead Generation (1) conversion page -->
+<script>
+    gtag('event', 'conversion', {
+        'send_to': 'AW-16458395568/fHZXCOizkZ4ZELDf_Kc9',
+        'transaction_id': ''
+    });
+  </script>
+  
+  <!-- Event snippet for Lead Generation (1) conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-16458395568/fHZXCOizkZ4ZELDf_Kc9',
+          'transaction_id': '',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+    
     <!-- //Meta tag Keywords -->
     <!-- Custom-Files -->
     <link rel="stylesheet" href="css/bootstrap.css">
