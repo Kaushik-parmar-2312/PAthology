@@ -22,9 +22,9 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          app_location: "/" # Adjust if necessary
-          output_location: "" # Empty if files are not built
-          api_location: "" # Optional
-          routes_location: "" # Optional, if you have routes configuration
-          config_file_location: "" # Optional, if you have a config file
-          skip_app_build: "false" # Adjust if you have a build step
+          app_location: "/" # Path to your app's source code, e.g., "/public" if files are in a subdirectory
+          output_location: "" # Leave empty if not using a build output directory
+          api_location: "" # Optional, if you have Azure Functions or other APIs
+          routes_location: "" # Optional, if you have routing configurations
+          config_file_location: "" # Optional, if you have a configuration file
+          skip_app_build: "false" # Set to "true" if you want to skip the build step
