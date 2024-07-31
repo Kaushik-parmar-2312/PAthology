@@ -22,7 +22,7 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          app_location: "/app" # Path to your app's source code, set to "/" because your files are at the root level
+          app_location: "/" # Path to your app's source code, set to "/" because your files are at the root level
           output_location: "" # Leave empty since you are serving static content directly from the root
           api_location: "" # Leave empty as you do not have APIs
           routes_location: "" # Leave empty if you do not have routing configurations
