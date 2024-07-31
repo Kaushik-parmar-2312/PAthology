@@ -22,17 +22,9 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          app_location: "/" # Update if needed
-          output_location: "" # Empty if not using build output directory
-
-  close_pull_request_job:
-    if: github.event_name == 'pull_request' && github.event.action == 'closed'
-    runs-on: ubuntu-latest
-    name: Close Pull Request Job
-    steps:
-      - name: Close Pull Request
-        id: closepullrequest
-        uses: Azure/static-web-apps-deploy@v1
-        with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
-          action: "close"
+          app_location: "/" # Adjust if necessary
+          output_location: "" # Empty if files are not built
+          api_location: "" # Optional
+          routes_location: "" # Optional, if you have routes configuration
+          config_file_location: "" # Optional, if you have a config file
+          skip_app_build: "false" # Adjust if you have a build step
